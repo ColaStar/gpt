@@ -1,0 +1,122 @@
+<view class="data-v-57280228" style="height:10vh">
+    <our-loading wx:if="{{b}}" class="data-v-57280228" data-c-h="{{!a}}" u-i="57280228-0" bind:__l="__l" u-p="{{b}}"/>
+    <scroll-view class="data-v-57280228" scroll-y="true" scroll-into-view="{{l}}" style="height:91vh;background-color:#383838;;padding-top:10px">
+         <!-- <uni-notice-bar wx:if="{{j}}" class="data-v-57280228" u-i="57280228-2" bind:__l="__l" u-p="{{j}}"/>  -->
+        <view wx:for="{{k}}" wx:for-item="x" wx:key="i" class="data-v-57280228">
+            <view wx:if="{{x.a}}" id="{{x.c}}" class="userinfo data-v-57280228" bindtap="{{x.d}}">
+                    <view class="flex justify-end data-v-57280228" style="margin-right:5%">
+                        <view class="usermsg data-v-57280228">
+                            <text class="data-v-57280228" style="word-break:break-all">{{x.b}}</text>
+                        </view>
+                    </view>
+                    <view class="jiaobiao"> 
+                        <image style="height:35rpx;width:30rpx" src="/static/02.png" mode="aspectFit">     
+                        </image>
+                    </view>
+                    
+                    <view class="chat-img data-v-57280228"> 
+                        <image class="data-v-57280228" style="height:100rpx;width:100rpx" src="/static/head.png" mode="aspectFit">     
+                        </image>
+                    </view>       
+            </view>
+            <view wx:if="{{x.e}}" id="{{x.i}}" class="aiinfo data-v-57280228" bindtap="{{x.j}}">
+                <view class="chat-img data-v-57280228">
+                    <image class="data-v-57280228" style="height:100rpx;width:100rpx" src="/static/openai.png" mode="aspectFit">
+                    </image>
+                </view>
+                <view class="jiaobiaol"> 
+                        <image style="height:35rpx;width:30rpx" src="/static/01.png" mode="aspectFit">     
+                        </image>
+                </view>
+                <view class="flex data-v-57280228">
+                    <view class="aimsg data-v-57280228">
+                        <!-- <text class="data-v-57280228" style="word-break:break-all">{{x.f}}</text> -->
+                        <image wx:if="{{x.f}}" class="data-v-57280228" style="width:450rpx; height:450rpx" src="{{x.g}}">     
+                        </image>
+                        <text wx:if="{{!x.f}}"  class="data-v-57280228" style="word-break:break-all">{{x.h}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="data-v-57280228" style="height:130rpx">
+
+        </view>
+    </scroll-view>
+    <view class="flex-column-center data-v-57280228">
+        <view class="inpubut data-v-57280228">
+            
+            <!-- <view class=" data-v-57280228">
+                <uni-icons wx:if="{{n}}" class="data-v-57280228" style="margin-left: 10px" bindclick="{{m}}" u-i="57280228-3" bind:__l="__l" u-p="{{n}}">
+                </uni-icons>1+2
+            </view> -->
+            <input class="dh-input data-v-57280228" type="text" maxlength="-1" bindconfirm="{{o}}" confirm-type="search" placeholder-class="my-neirong-sm" placeholder="输入内容开始" value="{{p}}" bindinput="{{q}}"/>
+            
+            <!-- <view class="data-v-57280228" style="margin: 0px 0px 0 5px">
+                <uni-data-select wx:if="{{e}}" class="data-v-57280228" bindchange="{{c}}" u-i="57280228-1" bind:__l="__l" bindupdateModelValue="{{d}}" u-p="{{e}}">
+                </uni-data-select>
+            </view>
+            <view class="caidan">
+                <image class="data-v-57280228" src="/static/cd.png" style="height:32px;width:32px;margin: 0px -3px 0 -31px;" alt="aspectFit"></image>
+            </view> -->
+            <button bindtap="{{s}}" disabled="{{t}}" class="btn data-v-57280228">{{r}}</button>
+        </view>
+    </view>
+    <view class=" data-v-57280228">
+        <uni-drawer wx:if="{{C}}" u-s="{{['d']}}" u-r="showRight" class=" r data-v-57280228" u-i="57280228-4" bind:__l="__l" u-p="{{C}}">
+            <view class="cen data-v-57280228">
+                <image class="data-v-57280228" src="/static/head.png" style="height:80rpx;width:80rpx" alt="aspectFit"></image>
+            </view>
+            <view class="cen data-v-57280228" bindtap="onLoad" style="margin-bottom: -20px;">
+                <text wx:if="{{f}}" class="chishu">剩余次数：{{g}}</text>
+                <text wx:if="{{h}}" class="chishu">剩余次数：0</text>
+            </view>
+            <view class="cen data-v-57280228" bindtap="{{w}}">
+                <button class="getidbianlan" bindtap="{{K}}">获取账号ID</button>     
+            </view>
+            <view class="cen data-v-57280228">
+                <button class="getidbianlan" bindtap="onLoad">刷新次数</button>
+            </view>
+            <view class="cen data-v-57280228">
+                <button class="getidbianlan" bindtap="{{F}}" open-type="share">分享好友</button>
+            </view>
+            
+            <view class="cen data-v-57280228">
+                <text class="jianjie">使用方法：
+
+                    例1：帮我写一个python爬虫
+                    例2：画一幅梵高风格的油画
+                    例3：写一篇行政工作日报
+                    例4：帮我写作业题目是xxx
+                    例5：把下文翻译成英文xxx
+                    例6：写一个搞笑短视频剧本
+                    例7：写物理相关的学术论文
+                    例8：用王小波的风格写篇情书</text>
+            </view>
+            <view class="cen data-v-57280228">
+                <button class="getidbianlan" open-type="contact" bindcontact="handleContact">技术支持</button>
+            </view>
+            <view class="cen data-v-57280228">
+                <button wx:if="{{x}}" class="getidbianlan" bindtap="{{y}}">参数配置</button>
+            </view>
+            <!-- <view class="adj data-v-57280228">{{z}}</view> -->
+            <view class="adContainer data-v-57280228">
+                <ad-custom class="data-v-57280228" unit-id="{{A}}"></ad-custom>
+            </view>
+        </uni-drawer>
+    </view>
+    <uni-popup wx:if="{{J}}" class="r data-v-57280228" u-s="{{['d']}}" u-r="popup" u-i="57280228-5" bind:__l="__l" u-p="{{J}}">
+        <view class="popnum data-v-57280228">
+            <button wx:if="{{D}}" class="guanggao" bindtap="{{E}}">浏览广告奖励次数</button>
+            <button class="fenxiang" bindtap="{{F}}" open-type="share">分享好友奖励次数</button>
+            <button class="huoqucishu" bindtap="{{H}}">官方客服：{{G}}</button>
+        </view>
+    </uni-popup>
+    <uni-popup wx:if="{{N}}" class="r data-v-57280228" u-s="{{['d']}}" u-r="addnumpop" u-i="57280228-6" bind:__l="__l" u-p="{{N}}">
+        <view class="popadd data-v-57280228">
+            <text class="fuzhi">点击下方按钮自动复制账号ID</text>
+            <text class="fuzhi">添加客服微信{{L}}充值次数</text>
+            <button class="getid" bindtap="{{K}}">获取账号ID</button>   
+        </view>
+    </uni-popup>
+
+</view>
